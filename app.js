@@ -47,7 +47,12 @@ const displayImages = (images) => {
     imageCard.innerHTML = `
         <img src=${image.urls.regular} alt=${image.alt_description}></img>
         <p>${capitalizeFirstLetter(image.alt_description)}</p>
+        <button class="view">View image</button>
         `;
+    const viewButton = imageCard.querySelector(".view");
+    viewButton.addEventListener("click", () => {
+      window.open(image.links.download, "_blank");
+    });
     imageContainer.appendChild(imageCard);
   });
 };

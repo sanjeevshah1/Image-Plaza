@@ -56,7 +56,6 @@ body {
 .result p {
   font-size: 1.3rem;
   margin-left: 30px;
-  /* margin-top: 10px; */
 }
 #image-container {
   height: auto;
@@ -98,6 +97,42 @@ body {
   overflow: hidden;
   padding: 10px;
 }
+.image-card button {
+  width: auto;
+  height: auto;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: inherit;
+  color: white;
+  letter-spacing: 4px;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.image-card {
+  position: relative;
+}
+
+.image-card img {
+  transition: filter 0.5s ease;
+}
+
+.image-card:hover img {
+  filter: blur(3px);
+}
+
+.image-card button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.image-card:hover button {
+  opacity: 1;
+
 /* css for show more */
 .next {
   width: 100vw;
