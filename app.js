@@ -8,7 +8,7 @@ let pageNo = 1;
 
 async function displayRandom() {
   result.innerHTML = `<p>Showing random results...</p>`;
-  const apiURL = `https://api.unsplash.com/photos/random?count=${10}&client_id=${accessKEY}`;
+  const apiURL = `https://api.unsplash.com/photos/random?count=${9}&client_id=${accessKEY}`;
   try {
     const response = await fetch(apiURL);
     const images = await response.json();
